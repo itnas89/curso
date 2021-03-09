@@ -10,7 +10,11 @@
 .App-content {
   padding: 2vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.App-content button, .App-content input {
+  width: 100px
 }
 
 @media (prefers-reduced-motion: no-preference) {
