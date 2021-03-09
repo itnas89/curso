@@ -1,6 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
-import ComponenteEventos from './Components/ComponenteEventos'
+import MouseColor from './Components/MouseColor/MouseColor';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <div className="App-content">
-        <ComponenteEventos />
+        <MouseColor />
       </div>
     </div>
   );
