@@ -6,11 +6,11 @@ import * as Yup from 'yup'
 
 import MensajesHeader from '../Components/MensajesHeader/MensajesHeader'
 import MensajesTable from '../Components/MensajesTable/MensajesTable'
-import { borrarMensaje, crearMensaje, leerMensaje, vaciarMensajes } from '../index'
+import { borrarMensaje, crearMensaje, leerMensaje, vaciarMensajes } from '../Redux/Actions/Mensajes'
 
 export default function Vista() {
     //const [mensajes, setMensajes] = useState([])
-    const mensajes = useSelector(state => state)
+    const mensajes = useSelector(state => state.mensajes)
     const dispatch = useDispatch()
 
     const validaciones = Yup.object().shape({
@@ -24,13 +24,14 @@ export default function Vista() {
             .min(10, 'El mensaje es demasiado corto')
     })
     
-    let crear = ({asunto, email, mensaje}) => {
+    let crear = ({asunto, email, mensaje}, {setSubmitting}) => {
         let nuevo = {
           "asunto": asunto,
           "email": email,
           "mensaje": mensaje,
           "leido": false
         };
+        setSubmitting(false)
      
         dispatch(crearMensaje(nuevo));
     }
