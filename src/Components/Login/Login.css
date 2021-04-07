@@ -1,0 +1,32 @@
+.Login-form form {
+    width: 20vw;
+    height: 40vh;
+    border: 1px solid #282C34;
+    border-radius: 10px;
+    background-color: #EAEAE9;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.Login-form form label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Login-form form span {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 0.8em;
+    color: red;
+}
+
+.Login-form form button {
+    width: max-content;
+}

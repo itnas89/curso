@@ -1,10 +1,27 @@
+export const login = ({email, password}) => {
+    return {
+        type: ACTIONS_LOGIN.LOGIN,
+        email: email,
+        password: password
+    }
+}
 
-    export const changeSession = () => {
-        return {
-            type: ACTIONS_LOGIN.CHANGE
-        }
+export const logout = () => {
+    return {
+        type: ACTIONS_LOGIN.LOGOUT
     }
- 	
-    export const ACTIONS_LOGIN = {
-        CHANGE: "CHANGE_SESSION"
+}
+
+export const register = ({email, password}) => {
+    return {
+        type: ACTIONS_LOGIN.REGISTER,
+        email: email,
+        password: password
     }
+}
+ 
+export const ACTIONS_LOGIN = {
+    LOGIN: "LOGIN",
+    LOGOUT: "LOGOUT",
+    REGISTER: "REGISTER"
+}
